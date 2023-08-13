@@ -3,7 +3,41 @@ use PortfolioProject
 -- Ver todos los datos:
 select * from ProduccionAguaPotable
 
--- Obtener la cantidad total de galones (anual) por cada acueducto en un anio especifico:
+-- Obtener la cantidad total de galones (anual) por cada acueducto en 2019:
+SELECT Año, 
+    SUM([Acueducto La Vega]) AS [La Vega], 
+    SUM([Acueducto Jarabacoa]) AS [Jarabacoa], 
+    SUM([Acueducto Constanza]) AS [Constanza], 
+    SUM([Acueducto Jima]) AS [Jima], 
+    SUM([Acueductos rurales]) AS [Rurales] 
+FROM ProduccionAguaPotable
+WHERE Año = '2019' 
+GROUP BY Año;
+
+-- Obtener la cantidad total de galones (anual) por cada acueducto en 2020:
+SELECT Año, 
+    SUM([Acueducto La Vega]) AS [La Vega], 
+    SUM([Acueducto Jarabacoa]) AS [Jarabacoa], 
+    SUM([Acueducto Constanza]) AS [Constanza], 
+    SUM([Acueducto Jima]) AS [Jima], 
+    SUM([Acueductos rurales]) AS [Rurales] 
+FROM ProduccionAguaPotable
+WHERE Año = '2020' 
+GROUP BY Año;
+
+-- Obtener la cantidad total de galones (anual) por cada acueducto en 2021:
+SELECT Año, 
+    SUM([Acueducto La Vega]) AS [La Vega], 
+    SUM([Acueducto Jarabacoa]) AS [Jarabacoa], 
+    SUM([Acueducto Constanza]) AS [Constanza], 
+    SUM([Acueducto Jima]) AS [Jima], 
+    SUM([Acueductos rurales]) AS [Rurales] 
+FROM ProduccionAguaPotable
+WHERE Año = '2021' 
+GROUP BY Año;
+
+
+-- Obtener la cantidad total de galones (anual) por cada acueducto en 2022:
 SELECT Año, 
     SUM([Acueducto La Vega]) AS [La Vega], 
     SUM([Acueducto Jarabacoa]) AS [Jarabacoa], 
@@ -35,11 +69,28 @@ FROM ProduccionAguaPotable
 WHERE Año = '2023' AND Mes = 'Enero';
 
 
--- Calcular la suma total de galones suministrados por todos los acueductos en un año específico:
+-- Calcular la suma total de galones suministrados por todos los acueductos en 2019:
+SELECT Año, SUM([Acueducto La Vega] + [Acueducto Jarabacoa] + [Acueducto Constanza] + [Acueducto Jima] + [Acueductos rurales]) AS [Suministro Total]
+FROM ProduccionAguaPotable
+WHERE Año = '2019'
+GROUP BY Año;
 
+-- Calcular la suma total de galones suministrados por todos los acueductos en 2020:
 SELECT Año, SUM([Acueducto La Vega] + [Acueducto Jarabacoa] + [Acueducto Constanza] + [Acueducto Jima] + [Acueductos rurales]) AS [Suministro Total]
 FROM ProduccionAguaPotable
 WHERE Año = '2020'
+GROUP BY Año;
+
+-- Calcular la suma total de galones suministrados por todos los acueductos en 2021:
+SELECT Año, SUM([Acueducto La Vega] + [Acueducto Jarabacoa] + [Acueducto Constanza] + [Acueducto Jima] + [Acueductos rurales]) AS [Suministro Total]
+FROM ProduccionAguaPotable
+WHERE Año = '2021'
+GROUP BY Año;
+
+-- Calcular la suma total de galones suministrados por todos los acueductos en 2022:
+SELECT Año, SUM([Acueducto La Vega] + [Acueducto Jarabacoa] + [Acueducto Constanza] + [Acueducto Jima] + [Acueductos rurales]) AS [Suministro Total]
+FROM ProduccionAguaPotable
+WHERE Año = '2022'
 GROUP BY Año;
 
 

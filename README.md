@@ -6,7 +6,6 @@ producidos por cada uno de los Sistemas de Acueductos.
 Proceso: 
 1. Obtencion de datos (https://datos.gob.do/tr/dataset/mi-conjunto-de-datos-coraavega)
 2. Manipulacion de datos (usé Microsoft SQL Server + Excel).
-3. Python usando Anaconda para las graficas, para mejor entendimiento de los datos encontrados.
-
+3. Python usando Anaconda.
 
 Hecho por: Nelton Rodriguez Garcia

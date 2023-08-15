@@ -264,6 +264,56 @@ plt.grid(True)
 plt.show()
 
 
+# In[17]:
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+# Predecir cantidad de agua potable en galones producida por el Acueducto La Vega en 2023
+# Metodo: Ajuste de regresion lineal ==> ax + b
+
+# Variables comunes
+x = np.array([2019,2020,2021,2022])
+year = 2023
+
+# Acueducto La Vega
+y_lavega = np.array([4723486401.6,5687356083.84,6010776244.8,6367200326.208])
+coeficiente_lavega = np.polyfit(x,y_lavega,1) # esto es ==> ax + b, grado 1
+predict_lavega = np.polyval(coeficiente_lavega, year)
+print(f"Para el año {year} la prediccion para el Acueducto La Vega es {predict_lavega}")
+
+# Acueducto Jarabacoa
+
+y_jarabacoa = np.array([311871071.232,401524874.496,422797110.912,537192442.368])
+coeficiente_jarabacoa = np.polyfit(x,y_jarabacoa,1) # esto es ==> ax + b, grado 1
+predict_jarabacoa = np.polyval(coeficiente_jarabacoa, year)
+print(f"Para el año {year} la prediccion para el Acueducto Jarabacoa es {predict_jarabacoa}")
+
+# Acueducto Constanza
+
+y_constanza = np.array([545089646.016,594344459.52,606190264.992,669801555.648])
+coeficiente_constanza = np.polyfit(x,y_constanza,1) # esto es ==> ax + b, grado 1
+predict_constanza = np.polyval(coeficiente_constanza, year)
+print(f"Para el año {year} la prediccion para el Acueducto Constanza es {predict_constanza}")
+
+
+# Acueducto Jima
+
+y_jima = np.array([291580279.2,285372072.864,288110987.424,245543690.304])
+coeficiente_jima = np.polyfit(x,y_jima,1) # esto es ==> ax + b, grado 1
+predict_jima = np.polyval(coeficiente_jima, year)
+print(f"Para el año {year} la prediccion para el Acueducto Jima es {predict_jima}")
+
+# Acueductos Rurales
+
+y_rurales = np.array([386780384.448,562709996.352,555337751.328,499007408.544])
+coeficiente_rurales = np.polyfit(x,y_rurales,1) # esto es ==> ax + b, grado 1
+predict_rurales = np.polyval(coeficiente_rurales, year)
+print(f"Para el año {year} la prediccion para los Acueductos Rurales es {predict_rurales}")
+
+
 # In[ ]:
 
 
